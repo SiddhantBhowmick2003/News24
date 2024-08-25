@@ -1,4 +1,5 @@
 let mode = document.getElementById("mode");
+import API_URL from "./config1.js";
 
 function lightToDark() {
     document.getElementById("navid").classList.toggle("navdark");
@@ -20,8 +21,7 @@ function lightToDark() {
 mode.onclick = lightToDark;
 
 async function displayNews() {
-    const apiurl = "https://newsapi.org/v2/everything?q=tesla&from=2024-07-25&sortBy=publishedAt&apiKey=70ffb6153816481dac40437358dc857e";
-
+    const apiurl = API_URL;
     try {
         const response = await fetch(apiurl);
 
