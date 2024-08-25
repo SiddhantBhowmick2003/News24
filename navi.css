@@ -1,0 +1,109 @@
+
+/* #naviul{
+    padding: 5px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top: 0;
+    list-style: none;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 1px rgb(4, 2, 2);
+    border-radius: 6px;
+}
+.navisearch {
+    padding: 10px; /* Adjust this value to increase or decrease the padding */
+/* }
+.navisearch:hover{
+    background-color:rgb(199, 165, 209);
+    transform: scale(1.05);
+    border-radius: 8px;
+} */ 
+#naviul {
+    padding: 0;
+    margin: 0;
+    background-color: beige;
+    border-radius: 12px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Distribute items across the line */
+    width: 100%; /* Ensure it takes the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+
+}
+.navisearch {
+    position: relative;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Allow the width to adjust based on content */
+    height: 30px;
+    border-radius: 24px;
+    line-height: 1.6;
+    transition: transform 0.64s cubic-bezier(0.23, 1, 0.32, 1), color 0.64s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: scale(1);
+}
+
+.navisearch:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.content {
+    padding: 12px;
+    border-radius: 10px;
+    background: transparent;
+    color: #000000;
+    z-index: 1;
+    transition: all 0.64s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navisearch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0a3cff;
+    border-radius: inherit;
+    height:100%;
+    width: 100%;
+    opacity: 0;
+    transform: skew(-24deg);
+    clip-path: circle(0% at 50% 50%);
+    transition: all 0.64s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navisearch:hover::before {
+    opacity: 3;
+    transform: skew(0deg);
+    clip-path: circle(100% at 50% 50%);
+}
+
+.content .heading {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+    z-index: 1;
+}
+
+.navisearch:hover .content {
+    color: #ffffff;
+}
+#search-bar-container {
+    display: none; /* Hide the search bar by default */
+    position: absolute; /* Position it absolutely relative to the parent */
+    top: 40px; /* Adjust based on your design */
+    right: 0; /* Align it to the right side */
+    width: 200px; /* Adjust the width as needed */
+    align-items: center;
+}
+
+#search-bar {
+    width: 120px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

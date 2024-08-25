@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navi.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body id = "body">
+<body>
     <div class="nav" id="navid">
         <div class="news1" id="news1id">
             <h1 id="news">NEWS</h1>
@@ -14,15 +15,67 @@
         <div class="news2" id="news2id">
             <ul id = "navright">
                 <li id = "search">🔍</li>
-                <li><label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-                </li>
+                <li id="mode">☾</li>
             </ul>
         </div>
+        <div id="search-bar-container">
+            <input type="text" id="search-bar" placeholder="Search..." />
+        </div>
     </div>
-    
+
+    <ul id="naviul">
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">Home</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">News</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">Marketing</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">Sports</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">Politics</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">Industry</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">Technology</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">Health</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">General</p>
+            </div>
+        </li>
+        <li class="navisearch">
+            <div class="content">
+                <p class="heading">Crime</p>
+            </div>
+        </li>
+    </ul>
+    <script src="navi.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
