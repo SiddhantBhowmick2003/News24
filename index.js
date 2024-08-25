@@ -19,7 +19,59 @@ function lightToDark() {
 // Ensure the function is assigned as an event handler
 mode.onclick = lightToDark;
 
+async function displayNews() {
+    const apiurl = "https://newsapi.org/v2/everything?q=tesla&from=2024-07-25&sortBy=publishedAt&apiKey=70ffb6153816481dac40437358dc857e";
 
-//using the search bar
-document.getElementById("search").onclick = document.getElementById("search").classList.toggle("searchnews");
+    try {
+        const response = await fetch(apiurl);
+
+        if (!response.ok) {
+            console.log("couldn't fetch");
+            return;
+        }
+
+        const data = await response.json();
+        console.log(data);
+        const articles = data.articles;
+        
+        let cnt = 1;
+        for (let i = 0; i < articles.length; i++) {
+            if (cnt > 10) {
+                break;
+            }
+            
+            
+            if (articles[i].title === "[Removed]") {
+                continue; 
+            }
+            
+            
+            let cardtitle = "cardtitle" + cnt;
+            let card_desc = "card_desc" + cnt;
+            let cimage = "img" + cnt;
+            
+            
+            if (document.getElementById(cardtitle) && document.getElementById(card_desc) && document.getElementById(cimage)) {
+                document.getElementById(cardtitle).textContent = articles[i].title;
+                document.getElementById(card_desc).textContent = articles[i].description;
+                document.getElementById(cimage).src = articles[i].urlToImage;
+                
+                
+                cnt++;
+            }
+        }
+
+
+
+    } catch (error) {
+        console.error("Error fetching the news:", error);
+    }
+}
+
+
+// Call the function after the DOM content is fully loaded
+window.addEventListener('DOMContentLoaded', (event) => {
+    displayNews();
+});
+
 

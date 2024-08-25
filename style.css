@@ -57,8 +57,52 @@ body{
     height: 40px;
 }
 
+#todaynews
+{
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+}
 
 
+/* Cards for Newssss */
+.container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+.cards {
+    width: 300px;
+    background-color: rgb(216, 213, 213);
+    margin: 50px;
+    border-style: none;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.cimage {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cardtitle {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card_desc {
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 
 /***     Dark Mode       ***/
