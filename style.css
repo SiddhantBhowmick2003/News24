@@ -29,6 +29,7 @@ body{
 #mode
 {
     font-size: 40px;
+    cursor: pointer;
 }
 #mode:hover{
     box-shadow: 0px 0px 50px rgb(0, 0, 0);
@@ -45,6 +46,7 @@ body{
 #search{
     font-size: 30px;
     padding: 5px;
+    cursor: pointer;
 }
 #search:hover{
     box-shadow: 0px 0px 50px rgb(0, 0, 0);
