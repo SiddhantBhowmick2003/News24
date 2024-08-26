@@ -1,4 +1,4 @@
-let mode = document.getElementById("mode");
+let mode = document.getElementById("toggle-switch");
 
 function lightToDark() {
     document.getElementById("navid").classList.toggle("navdark");
@@ -20,6 +20,5 @@ function lightToDark() {
 mode.onclick = lightToDark;
 
 
-//using the search bar
-document.getElementById("search").onclick = document.getElementById("search").classList.toggle("searchnews");
+
 

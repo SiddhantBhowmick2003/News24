@@ -103,7 +103,19 @@
 #search-bar {
     width: 120px;
     padding: 8px;
+    margin-bottom: 0px;
     border-radius: 4px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#close-search {
+    margin-left: 0px;
+    padding:0px;
+    cursor: pointer;
+    font-size: 18px; /* Adjust size as needed */
+}
+.ui-switch-inline {
+    margin-left: 8px; /* Space between the search bar and the toggle switch */
+    display: flex;
+    align-items: center;
 }

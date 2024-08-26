@@ -7,19 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="body">
     <div class="nav" id="navid">
         <div class="news1" id="news1id">
             <h1 id="news">NEWS</h1>
         </div>
         <div class="news2" id="news2id">
             <ul id = "navright">
-                <li id = "search">🔍</li>
-                <li id="mode">☾</li>
+                <li id = "search" class="searchbar">🔍</li>
+                <li class="searchbar ui-switch-inline"><label class="ui-switch">
+                    <input type="checkbox" id="toggle-switch">
+                    <div class="slider">
+                    <div class="circle"></div>
+                    </div>
+                </label>
+                </li>
             </ul>
         </div>
-        <div id="search-bar-container">
+        <div id="search-bar-container" class="ui-switch-inline">
             <input type="text" id="search-bar" placeholder="Search..." />
+            <span id="close-search">❌</span>
         </div>
     </div>
 
